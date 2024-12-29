@@ -1,0 +1,523 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Hero Section */
+.hero {
+    background: url('your-image-url.jpg') no-repeat center center/cover;
+    height: 100vh;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Button */
+.btn {
+    padding: 10px 20px;
+    background: #ff5733;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Features Section */
+.features {
+    padding: 20px 0;
+    background: #f4f4f4;
+    text-align: center;
+}
+
+.features h2 {
+    margin-bottom: 20px;
+}
+
+.features ul {
+    list-style: none;
+    padding: 0;
+}
+
+.features li {
+    margin: 10px 0;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Destination Section */
+.destinations {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.destination-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between cards */
+}
+
+.destination-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px; /* Fixed width for cards */
+    transition: transform 0.3s;
+}
+
+.destination-card:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+}
+
+.destination-card img {
+    width: 100%; /* Full width */
+    height: 200px; /* Fixed height */
+    object-fit: cover; /* Cover the area */
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-content h3 {
+    margin: 10px 0;
+    font-size: 1.5em;
+}
+
+.card-content p {
+    color: #555; /* Slightly lighter text for description */
+}
+
+/* Navbar Styles */
+.navbar {
+    background: #333; /* Dark background color */
+    color: white; /* Text color */
+    padding: 10px 0;
+    position: sticky; /* Stick to the top on scroll */
+    top: 0;
+    z-index: 1000; /* Ensure it stays above other content */
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; /* Max width for the container */
+    margin: auto;
+}
+
+.logo h1 {
+    margin-left: 20px; /* Space from the left */
+}
+
+.nav-links {
+    list-style: none; /* Remove bullet points */
+    display: flex;
+    gap: 20px; /* Space between links */
+}
+
+.nav-links li a {
+    color: white; /* Link color */
+    text-decoration: none; /* Remove underline */
+    padding: 8px 15px; /* Padding for links */
+    border-radius: 5px; /* Rounded corners */
+    transition: background 0.3s; /* Transition for hover effect */
+}
+
+.nav-links li a:hover {
+    background: #ff5733; /* Change background on hover */
+}
+
+.menu-toggle {
+    display: none; /* Hidden by default */
+    flex-direction: column; /* Stack bars vertically */
+    cursor: pointer; /* Pointer cursor */
+    margin-right: 20px; /* Space from the right */
+}
+
+.menu-toggle .bar {
+    height: 3px; /* Height of bars */
+    width: 25px; /* Width of bars */
+    background: white; /* Color of bars */
+    margin: 3px 0; /* Space between bars */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide links by default */
+        flex-direction: column; /* Stack links vertically */
+        position: absolute; /* Positioning */
+        top: 60px; /* Below the navbar */
+        left: 0;
+        right: 0;
+        background: #333; /* Background color */
+        padding: 10px 0; /* Padding */
+    }
+
+    .nav-links.active {
+        display: flex; /* Show links when active */
+    }
+
+    .menu-toggle {
+        display: flex; /* Show toggle button on mobile */
+    }
+}
+
+/* Main Container */
+.main-container {
+    display: flex; /* Use flexbox for layout */
+}
+
+/* Login/Signup Section */
+.login-signup {
+    flex: 2; /* 2/3 of the width */
+    padding: 20px;
+    background-color: #f4f4f4; /* Light background */
+}
+
+.login-signup h2 {
+    margin-bottom: 20px;
+}
+
+.login-signup form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-signup input {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Features Section */
+.features {
+    flex: 1; /* 1/3 of the width */
+    padding: 20px;
+    background-color: #fff; /* White background */
+    border-left: 1px solid #ccc; /* Divider */
+}
+
+.features h2 {
+    margin-bottom: 20px;
+}
+
+.features .feature-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.features .feature-item {
+    margin-bottom: 15px;
+}
+
+/* Other existing styles remain unchanged *//* Login/Signup Section */
+.login-signup {
+    flex: 2; /* 2/3 of the width */
+    padding: 40px; /* Increased padding */
+    background: linear-gradient(to right, rgba(255, 87, 51, 0.8), rgba(255, 255, 255, 0.8)), url('background-image.jpg') no-repeat center center; /* Gradient and background image */
+    background-size: cover; /* Cover the entire section */
+    border-radius: 15px; /* More rounded corners */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Deeper shadow */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align items */
+}
+
+.login-signup h2 {
+    margin-bottom: 20px;
+    font-size: 28px; /* Larger font size */
+    color: #fff; /* White text color */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Text shadow for better contrast */
+}
+
+.input-group {
+    width: 100%; /* Full width */
+    margin-bottom: 15px; /* Space between inputs */
+}
+
+.login-signup input {
+    width: 100%; /* Full width */
+    padding: 15px; /* More padding */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px; /* Larger font size */
+    transition: border-color 0.3s; /* Transition for focus effect */
+}
+
+.login-signup input:focus {
+    border-color: #ff5733; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+.btn {
+    width: 100%; /* Full width */
+    padding: 15px; /* More padding */
+    background: #ff5733; /* Primary button color */
+    color: white; /* Text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px; /* Space between buttons */
+    font-size: 16px; /* Larger font size */
+    transition: background 0.3s; /* Transition for hover effect */
+}
+
+.btn:hover {
+    background: #e04e2b; /* Darker shade on hover */
+}
+
+.google-btn {
+    background: #db4437; /* Google red */
+}
+
+.google-btn:hover {
+    background: #c13526; /* Darker shade on hover */
+}
+
+/* Footer text */
+.footer-text {
+    margin-top: 15px; /* Space above text */
+    font-size: 14px; /* Smaller font size */
+    color: #fff; /* White text color */
+}
+
+.footer-text a {
+    color: #ff5733; /* Link color */
+    text-decoration: none; /* Remove underline */
+}
+
+.footer-text a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Main container */
+.main-container {
+    position: relative;
+}
+
+/* Hamburger Menu */
+.menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #ff5733; /* Color for the hamburger icon */
+}
+
+/* Sidebar */
+.sidebar {
+    height: 100%;
+    width: 250px; /* Width of the sidebar */
+    position: fixed; /* Fixed position */
+    top: 0;
+    left: -250px; /* Start hidden off-screen */
+    background-color: #fff; /* Background color */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5); /* Shadow effect */
+    transition: left 0.3s ease; /* Transition effect */
+    padding: 20px; /* Padding inside the sidebar */
+    z-index: 1000; /* Ensure it's on top */
+}
+
+/* Show sidebar when active */
+.sidebar.active {
+    left: 0; /* Slide in */
+}
+
+/* Close Button */
+.close-btn {
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: #ff5733;
+    cursor: pointer;
+    margin-bottom: 20px; /* Space below close button */
+}
+
+/* Sidebar Links */
+.sidebar h2 {
+    margin-bottom: 20px; /* Space below heading */
+}
+
+.sidebar ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+}
+
+.sidebar ul li {
+    margin: 15px 0; /* Space between items */
+}
+
+.sidebar ul li a {
+    text-decoration: none; /* Remove underline */
+    color: #333; /* Link color */
+    font-size: 18px; /* Font size */
+}
+
+.sidebar ul li a:hover {
+    color: #ff5733; /* Change color on hover */
+}
+
+
+/* Base styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: #333; /* Example background color */
+    color: white;
+    padding: 10px;
+}
+
+/* Main container styles */
+.main-container {
+    padding: 20px;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 15px;
+        text-align: center; /* Center-align text for mobile */
+    }
+
+    .main-container {
+        padding: 10px; /* Reduce padding */
+        margin: 0; /* Remove margins */
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    /* Adjust font sizes */
+    h1, h2, h3 {
+        font-size: 1.5rem; /* Responsive font size */
+    }
+
+    /* Example for buttons */
+    .menu-icon {
+        font-size: 2rem; /* Increase size for touch targets */
+    }
+}
+
+/* Base styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f9fc; /* Light background color */
+    color: #333; /* Dark text color for readability */
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: #2c3e50; /* Dark blue background */
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+/* Main container styles */
+.main-container {
+    padding: 20px;
+    background-color: white; /* White background for contrast */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Button styles */
+button {
+    background-color: #3498db; /* Teal button color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9; /* Darker teal on hover */
+}
+
+/* Link styles */
+a {
+    color: #e74c3c; /* Coral link color */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px;
+    }
+
+    .main-container {
+        padding: 15px;
+    }
+}
+
+
+.testimonials {
+    background-color: #f7f9fc;
+    padding: 50px;
+}
+
+.testimonial-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.testimonial-text {
+    font-size: 18px;
+    font-style: italic;
+    color: #333;
+}
+
+.testimonial-author {
+    font-size: 16px;
+    color: #666;
+    margin-top: 10px;
+}
+
+.testimonial-rating {
+    margin-top: 10px;
+}
+
+.testimonial-rating i {
+    color: #ffd700;
+    margin-right: 5px;
+}

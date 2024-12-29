@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Ease</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <!-- Hamburger Menu -->
+        <div class="menu-icon" onclick="toggleSidebar()">
+            &#9776; <!-- This is the hamburger icon -->
+        </div>
+
+        <!-- Sidebar -->
+        <div class="sidebar" id="sidebar">
+            <button class="close-btn" onclick="toggleSidebar()">×</button>
+            <h2>Menu</h2>
+            <ul>
+                <li><a href="#">Destination Discovery</a></li>
+                <li><a href="#">Detailed Reviews</a></li>
+                <li><a href="#">Smart Itinerary Planning</a></li>
+                <li><a href="#">Budget Tracking</a></li>
+                <li><a href="#">Personalized Recommendations</a></li>
+                <li><a href="#">Local Experiences</a></li>
+                <li><a href="#">Offline Mode</a></li>
+                <li><a href="#">AR/VR Integration</a></li>
+                <li><a href="#">Safety Alerts</a></li>
+                <li><a href="#">Social Sharing</a></li>
+                <li><a href="#">Sustainable Travel Recommendations</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </div>
+        <div class="container">
+            <div class="logo">
+                <h1>Travel Ease</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#destinations">Destinations</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#cta">Join Us</a></li>
+            </ul>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main-container">
+        
+        <!-- Login/Signup Section -->
+        <section class="login-signup">
+            <h2>Login / Signup</h2>
+            <form>
+                <div class="input-group">
+                    <input type="text" placeholder="Username" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" placeholder="Password" required>
+                </div>
+                <button type="submit" class="btn">Login</button>
+                <button type="button" class="btn google-btn">Sign in with Google</button>
+                <button type="button" class="btn" onclick="alert('Signup functionality coming soon!')">Signup</button>
+            </form>
+            <p class="footer-text">Don't have an account? <a href="#">Create one</a></p>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features">
+            <h2>What We Offer</h2>
+            <div class="feature-list">
+                <div class="feature-item">
+                    <img src="images/destinationdiscovery.png" alt="Icon 1"width="70" height="70">
+                    <h3>Destination Discovery</h3>
+                    <p>Find your perfect destination effortlessly.</p>
+                </div>
+                <div class="feature-item">
+                    <img src="images/samrt.png" alt="Icon 2"width="70" height="70">
+                    <h3>Smart Itinerary Planning</h3>
+                    <p>Create personalized itineraries tailored to your preferences.</p>
+                </div>
+                <div class="feature-item">
+                    <img src="images/localexperience.png" alt="Icon 3"width="70" height="70">
+                    <h3>Local Experiences</h3>
+                    <p>Immerse yourself in local culture and activities.</p>
+                </div>
+                <!-- Add more features as needed -->
+            </div>
+        </section>
+    </div>
+
+    <iframe
+    src="https://www.chatbase.co/chatbot-iframe/dimqcDjyyZbf9d3djPRON"
+    width="100%"
+    style="height: 100%; min-height: 700px"
+    frameborder="0"
+    ></iframe>
+    <!-- Destination Highlights Section -->
+    <section class="destinations">
+        <div class="container">
+            <h2>Explore Popular Destinations</h2>
+            <div class="destination-grid">
+                <div class="destination-card">
+                    <img src="images/paris.png" alt="Destination 1">
+                    <div class="card-content">
+                        <h3>Paris, France</h3>
+                        <p>Experience the romance and beauty of the City of Lights.</p>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <img src="images/tokyo.png" alt="Destination 2">
+                    <div class="card-content">
+                        <h3>Tokyo, Japan</h3>
+                        <p>Dive into the vibrant culture and technology of Japan.</p>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <img src="images/newyork.png" alt="Destination 3">
+                    <div class="card-content">
+                        <h3>New York, USA</h3>
+                        <p>Explore the bustling streets and iconic landmarks of NYC.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- User Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>User Experiences</h2>
+            <div class="testimonial-item">
+                <p class="testimonial-text">"Travel Ease made my trip planning so much easier! Highly recommend!"</p>
+                <cite class="testimonial-author">- Jane Doe</cite>
+            </div>
+            <div class="testimonial-item">
+                <p class="testimonial-text">"I loved the personalized recommendations. It felt like a friend was guiding me!"</p>
+                <cite class="testimonial-author">- John Smith</cite>
+            </div>
+            <!-- Add more testimonials as needed -->
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Explore?</h2>
+            <button class="btn" onclick="alert('Join Travel Ease Now!')">Join Us</button>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2>What We Offer</h2>
+            <ul>
+                <li>Destination Discovery</li>
+                <li>Detailed Reviews</li>
+                <li>Smart Itinerary Planning</li>
+                <li>Budget Tracking</li>
+                <li>Personalized Recommendations</li>
+                <li>Local Experiences</li>
+                <li>Offline Mode</li>
+                <li>AR/VR Integration</li>
+                <li>Safety Alerts</li>
+                <li>Social Sharing</li>
+                <li>Sustainable Travel Recommendations</li>
+            </ul>
+        </div>
+    </section>
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Travel Ease. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>
+            </div>
+        </div>
+    </footer>
+    
+    
+    <script src="script.js"></script> <!-- Ensure this is correct -->
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('active'); // Toggle the 'active' class
+        }
+    </script>
+</body>
+</html>
