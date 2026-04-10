@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MetaMask Interaction</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0px;
+            display: flex;
+            justify-content: center;
+            justify-content: space-between;
+        }
+        .container {
+            border: 2px black solid;
+            height: 30rem;
+            width: 25rem;
+            margin: 20px;
+            box-shadow: 4px 2px rgba(0,0,0,0.5);
+            border-radius: 3%;
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+        }
+        .box-1 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        img {
+            height: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <div >
+        <a href="frontwebpage.html" style="text-decoration:none; color: black;"><div> &#x2190; Back</div></a>
+    </div>
+    <div class="container">
+        <div>
+            <b>Modes of pament--</b>
+            <br>
+            <br>
+            <div class="box-1">
+                <a><img src="img1.jpeg"></a>
+                <a><img src="img2.jpeg"></a>
+                <a><img src="img3.jpeg"></a>
+                <a><img src="img4.jpeg" alt="more" style="height: 2rem;"></a>
+            </div>
+        </div>
+        <div><hr></div>
+        <div style="display: flex; justify-content: space-between; ">
+            <div style="display: flex; align-items: center; flex-direction:column; justify-content: center;">
+                <b>Meta mask</b>
+                <button id="connectBtn">Connect</button>
+            </div>
+            <div><img src="img5.jpeg" style="height: 6rem;"></div>
+        </div>
+        <br>
+        <div class="box-2">Address: <br><div style="height: 25px; width: 24rem; border: 2px solid black; border-radius: 5px; padding: 5px; justify-content: center;">0x304b6c89C283b0106Ac125d42b43e7a9A21Cdeb7</div></div>
+        <br>
+        <div style="display: flex; justify-content: space-between; ">
+            <div style="display: flex; align-items: center; flex-direction:column; justify-content: center;">
+                <div class="box-2">Amount : <br><div style="height: 25px; width: 10rem; border: 2px solid black; border-radius: 5px; padding: 5px; justify-content: center;" >2.30584301 XDC</div></div>
+            </div>
+            <div class="box-3">Make Pament--<br><button id="transferBtn">Transfer</button></div>
+        </div>
+        <div> <br><a href="https://etherscan.io/address/0x90F79bf6EB2c4f870365E785982E1f101E93b906" style="text-decoration:none; color: black; border: 1px solid black; border-radius: 5px; margin: 5px; padding: 2px;">Transaction History</a></div>
+        <div><hr></div>
+        <div style="height: 5rem; width: 24rem; display: flex; align-items: center; justify-content: center;" class="box-4"></div>
+    </div>
+    
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.3.5/dist/web3.min.js"></script>
+    <script>
+        window.addEventListener('load', async () => {
+            // Check if Web3 is injected by MetaMask
+            if (typeof window.ethereum !== 'undefined') {
+                window.web3 = new Web3(window.ethereum);
+                try {
+                    // Request account access if needed
+                    await window.ethereum.enable();
+                } catch (error) {
+                    console.error('User denied account access');
+                }
+            } else {
+                console.error('MetaMask is not installed!');
+            }
+        
+            // Connect button event listener
+            document.getElementById('connectBtn').addEventListener('click', async () => {
+                if (window.ethereum) {
+                    try {
+                        // Request account access
+                        await window.ethereum.request({ method: 'eth_requestAccounts' });
+                        console.log('Connected to MetaMask!');
+                        let x = document.querySelector(".box-4");
+                        let y = document.querySelector("#connectBtn");
+                        x.textContent = "connected to metamask";
+                        y.textContent = "Connected";
+                        x.style.color ="green";
+                    } catch (error) {
+                        console.error('User denied account access');
+                    }
+                } else {
+                    console.error('MetaMask is not installed!');
+                    let x = document.querySelector(".box-4");
+                    x.textContent = "Metamask not Installed!!";
+                    x.style.color ="red";
+                }
+            });
+        
+            // Transfer button event listener
+            document.getElementById('transferBtn').addEventListener('click', async () => {
+                const recipientAddress = '0x304b6c89C283b0106Ac125d42b43e7a9A21Cdeb7';
+                const amountToSend = web3.utils.toWei('0.0020', 'ether');
+                console.log(amountToSend);
+        
+                try {
+                    // Send transaction using MetaMask
+                    await window.ethereum.request({
+                        method: 'eth_sendTransaction',
+                        params: [
+                            {
+                                to: recipientAddress,
+                                from: (await web3.eth.getAccounts())[0],
+                                value: amountToSend
+                            }
+                        ]
+                    });
+                    console.log('Transaction sent successfully!');
+                    let x = document.querySelector(".box-4");
+                    x.textContent = "Transaction sent successfully!";
+                    x.style.color ="green";
+                } catch (error) {
+                    console.error('Failed to send transaction:', error);
+                    let x = document.querySelector(".box-4");
+                    x.textContent = "Transaction Failed";
+                    x.style.color ="red";
+                }
+            });
+        });
+        
+    </script>
+</body>
+</html>

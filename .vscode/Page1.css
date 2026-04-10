@@ -1,0 +1,17 @@
+* {
+    background-color: blue;
+}
+body {
+    margin: 0px;
+    padding: 0px;
+}
+.outerContainer {
+    color: red;
+    position: fixed;
+
+}
+.tester{
+    height: 20px;
+    width: 20px;
+    color: brown;
+}
